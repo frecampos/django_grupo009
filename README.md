@@ -2,7 +2,7 @@
 
 NUestro grupo detemino que los casos de prueba que se desar...........................
 
-a) Test de Reg de Clientes
+a) <u>Test de Reg de Clientes</u>
 
 nosotros queneramos las pruebas de eliminacion y agregar en la ........................
 
