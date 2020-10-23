@@ -1,0 +1,50 @@
+{% extends "web/base.html" %} {% load static%} {% block contenido %}
+<div class="formularios">
+    <h1>Formulario de Insumos</h1>
+    <script src="Scripts/validaciones.js"></script>
+    <script src="Scripts/cliente.js"></script>
+    <form action="{% url 'INSUMOS' %}" method="POST" onsubmit="return validarFormulario()">
+        {% csrf_token %}
+        <table border="3">
+            <tr>
+                <td>Nombre :</td>
+                <td>
+                    <input type="text" name="txtProducto" id="txtProducto" minlength="3" maxlength="120" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Precio :</td>
+                <td>
+                    <input type="number" name="txtPrecio" id="txtPrecio" min="1" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Descripcion:</td>
+                <td>
+                    <input type="text" id="txtDescripcion" name="txtDescripcion">
+                </td>
+            </tr>
+            <tr>
+                <td>Stock:</td>
+                <td>
+                    <input type="text" id="txtStock" name="txtStock" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <script>
+                        function ir() {
+                            location.href = '/lista_insumos/';
+                        }
+                    </script>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpiar">
+                    <input type="button" onclick="ir()" value="Listado Insumos">
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+    {{msg}}
+</div>
+{% endblock contenido %}

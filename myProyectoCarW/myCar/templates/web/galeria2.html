@@ -1,0 +1,40 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block contenido %}
+        <div class="principal">
+            <H1>Galeria de Imagenes</H1>
+        </div>
+        <div class="container">
+
+            <ul class="slider">
+                <li id="galeria1"> <img src="{% static 'img/clientefeliz4.jpg' %}"></li>
+                </li>
+                <li id="galeria2"><img src="{% static 'img/clientefeliz5.jpg' %}"> </li>
+                <li id="galeria3"> <img src="{% static 'img/lavado-imagen.jpg' %}"></li>
+                <li id="galeria4"> <img src="{% static 'img/galeria4.jpg' %}"></li>
+                <li id="galeria5"> <img src="{% static 'img/galeria5.jpg' %}"></li>
+                <li id="galeria6"> <img src="{% static 'img/galeria6.jpg' %}"></li>
+            </ul>
+            <ul class="points_menu">
+                <li>
+                    <a href="#galeria1"> </a>
+                </li>
+                <li>
+                    <a href="#galeria2"> </a>
+                </li>
+                <li>
+                    <a href="#galeria3"> </a>
+                </li>
+                <li>
+                    <a href="#galeria4"> </a>
+                </li>
+                <li>
+                    <a href="#galeria5"> </a>
+                </li>
+                <li>
+                    <a href="#galeria6"> </a>
+                </li>
+            </ul>
+        </div>
+{% endblock contenido %}
